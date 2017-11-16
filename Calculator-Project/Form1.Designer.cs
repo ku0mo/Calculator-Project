@@ -52,7 +52,7 @@
             this.btnSign = new System.Windows.Forms.Button();
             this.btnMsubtract = new System.Windows.Forms.Button();
             this.btnMC = new System.Windows.Forms.Button();
-            this.btnMplus = new System.Windows.Forms.Button();
+            this.btnMadd = new System.Windows.Forms.Button();
             this.btnMR = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -65,6 +65,7 @@
             this.btn8.TabIndex = 1;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = true;
+            this.btn8.Click += new System.EventHandler(this.btn8_Click);
             // 
             // btn9
             // 
@@ -85,6 +86,7 @@
             this.btn6.TabIndex = 5;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.Click += new System.EventHandler(this.btn6_Click);
             // 
             // btn5
             // 
@@ -95,6 +97,7 @@
             this.btn5.TabIndex = 4;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
+            this.btn5.Click += new System.EventHandler(this.btn5_Click);
             // 
             // btn4
             // 
@@ -106,6 +109,7 @@
             this.btn4.TabIndex = 3;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = true;
+            this.btn4.Click += new System.EventHandler(this.btn4_Click);
             // 
             // btn3
             // 
@@ -116,6 +120,7 @@
             this.btn3.TabIndex = 8;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = true;
+            this.btn3.Click += new System.EventHandler(this.btn3_Click);
             // 
             // btn2
             // 
@@ -126,6 +131,7 @@
             this.btn2.TabIndex = 7;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // btn1
             // 
@@ -136,6 +142,7 @@
             this.btn1.TabIndex = 6;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btnDot
             // 
@@ -156,6 +163,7 @@
             this.btn7.TabIndex = 10;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = true;
+            this.btn7.Click += new System.EventHandler(this.btn7_Click);
             // 
             // btn0
             // 
@@ -274,6 +282,7 @@
             // btnMsubtract
             // 
             this.btnMsubtract.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMsubtract.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnMsubtract.Location = new System.Drawing.Point(721, 104);
             this.btnMsubtract.Name = "btnMsubtract";
             this.btnMsubtract.Size = new System.Drawing.Size(134, 86);
@@ -291,15 +300,15 @@
             this.btnMC.Text = "MC";
             this.btnMC.UseVisualStyleBackColor = true;
             // 
-            // btnMplus
+            // btnMadd
             // 
-            this.btnMplus.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnMplus.Location = new System.Drawing.Point(586, 104);
-            this.btnMplus.Name = "btnMplus";
-            this.btnMplus.Size = new System.Drawing.Size(134, 86);
-            this.btnMplus.TabIndex = 25;
-            this.btnMplus.Text = "M+";
-            this.btnMplus.UseVisualStyleBackColor = true;
+            this.btnMadd.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMadd.Location = new System.Drawing.Point(586, 104);
+            this.btnMadd.Name = "btnMadd";
+            this.btnMadd.Size = new System.Drawing.Size(134, 86);
+            this.btnMadd.TabIndex = 25;
+            this.btnMadd.Text = "M+";
+            this.btnMadd.UseVisualStyleBackColor = true;
             // 
             // btnMR
             // 
@@ -318,7 +327,7 @@
             this.ClientSize = new System.Drawing.Size(865, 665);
             this.Controls.Add(this.btnMsubtract);
             this.Controls.Add(this.btnMC);
-            this.Controls.Add(this.btnMplus);
+            this.Controls.Add(this.btnMadd);
             this.Controls.Add(this.btnMR);
             this.Controls.Add(this.btnDivide);
             this.Controls.Add(this.btnCancel);
@@ -375,7 +384,7 @@
         private System.Windows.Forms.Button btnSign;
         private System.Windows.Forms.Button btnMsubtract;
         private System.Windows.Forms.Button btnMC;
-        private System.Windows.Forms.Button btnMplus;
+        private System.Windows.Forms.Button btnMadd;
         private System.Windows.Forms.Button btnMR;
     }
 }
