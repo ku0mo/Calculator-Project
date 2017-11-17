@@ -147,18 +147,29 @@ namespace Calculator_Project
                     {
                         case "＋":
                             Number = (long.Parse(operand1) + long.Parse(operand2)).ToString();
+                            operand1 = Number;
+                            operand2 = "0";
+                            operateState = "=";
                             break;
                         case "－":
                             Number = (long.Parse(operand1) - long.Parse(operand2)).ToString();
+                            operand1 = Number;
+                            operand2 = "0";
+                            operateState = "=";
                             break;
                         case "×":
                             Number = (long.Parse(operand1) * long.Parse(operand2)).ToString();
+                            operand1 = Number;
+                            operand2 = "0";
+                            operateState = "=";
                             break;
                         case "÷":
                             Number = (long.Parse(operand1) / long.Parse(operand2)).ToString();
+                            operand1 = Number;
+                            operand2 = "0";
+                            operateState = "=";
                             break;
                     }
-                    operateState = "=";
                     break;
             }
         }
