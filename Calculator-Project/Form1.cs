@@ -81,26 +81,30 @@ namespace Calculator_Project
         {
             calHandle.Number = resultBox.Text;
         }
+
         // 연산 관련 버튼 이벤트
         private void btnAdd_Click(object sender, EventArgs e)
         {
             calHandle.operate("＋");
-            //resultBox.Text = calHandle.Number;
+            resultBox.Text = string.Format("{0} + ", calHandle.Operand1);
         }
 
         private void btnSubtract_Click(object sender, EventArgs e)
         {
             calHandle.operate("－");
+            resultBox.Text = string.Format("{0} - ", calHandle.Operand1);
         }
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
             calHandle.operate("×");
+            resultBox.Text = string.Format("{0} × ", calHandle.Operand1);
         }
 
         private void btnDivide_Click(object sender, EventArgs e)
         {
             calHandle.operate("÷");
+            resultBox.Text = string.Format("{0} ÷ ", calHandle.Operand1);
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
@@ -208,6 +212,16 @@ namespace Calculator_Project
         {
             get { return number; }
             set { number = value; }
+        }
+        public string Operand1
+        {
+            get { return operand1; }
+            set { operand1 = value; }
+        }
+        public string Operand2
+        {
+            get { return operand2; }
+            set { operand2 = value; }
         }
         public override string ToString()
         {
