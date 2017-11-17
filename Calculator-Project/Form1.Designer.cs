@@ -231,6 +231,7 @@
             this.resultBox.Name = "resultBox";
             this.resultBox.Size = new System.Drawing.Size(534, 84);
             this.resultBox.TabIndex = 18;
+            this.resultBox.TextChanged += new System.EventHandler(this.resultBox_TextChanged);
             // 
             // memoryBox
             // 

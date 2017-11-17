@@ -76,6 +76,10 @@ namespace Calculator_Project
             calHandle.Cancel();
             resultBox.Text = calHandle.Number;
         }
+        private void resultBox_TextChanged(object sender, EventArgs e)
+        {
+            calHandle.Number = resultBox.Text;
+        }
     }
     class calculatorHandler
     {
