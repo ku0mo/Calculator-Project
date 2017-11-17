@@ -10,34 +10,6 @@ using System.Windows.Forms;
 
 namespace Calculator_Project
 {
-    class calculatorHandler
-    {
-        string number;
-        public calculatorHandler(string _number="0")
-        {
-            number = _number;
-        }
-        public void Add(string s)
-        {
-            if (number == "0")
-            {
-                number = s;
-            }
-            else
-            {
-                number = number + s;
-            }
-        }
-        public string Number
-        {
-            get { return number; }
-            set { number = value; }
-        }
-        public override string ToString()
-        {
-            return number;
-        }
-    }
     public partial class Calculator : Form
     {
         calculatorHandler calHandle = new calculatorHandler("0");
@@ -97,6 +69,44 @@ namespace Calculator_Project
         {
             calHandle.Add("9");
             resultBox.Text = calHandle.Number;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            calHandle.Cancel();
+            resultBox.Text = calHandle.Number;
+        }
+    }
+    class calculatorHandler
+    {
+        string number;
+        public calculatorHandler(string _number = "0")
+        {
+            number = _number;
+        }
+        public void Cancel()
+        {
+            number = "0";
+        }
+        public void Add(string s)
+        {
+            if (number == "0")
+            {
+                number = s;
+            }
+            else
+            {
+                number = number + s;
+            }
+        }
+        public string Number
+        {
+            get { return number; }
+            set { number = value; }
+        }
+        public override string ToString()
+        {
+            return number;
         }
     }
 }
