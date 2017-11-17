@@ -20,6 +20,7 @@ namespace Calculator_Project
         private void Calculator_Load(object sender, EventArgs e)
         {
         }
+        // 숫자 버튼 관련 이벤트
         private void btn0_Click(object sender, EventArgs e)
         {
             calHandle.Add("0");
@@ -80,27 +81,116 @@ namespace Calculator_Project
         {
             calHandle.Number = resultBox.Text;
         }
+        // 연산 관련 버튼 이벤트
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            calHandle.operate("＋");
+            //resultBox.Text = calHandle.Number;
+        }
+
+        private void btnSubtract_Click(object sender, EventArgs e)
+        {
+            calHandle.operate("－");
+        }
+
+        private void btnMultiply_Click(object sender, EventArgs e)
+        {
+            calHandle.operate("×");
+        }
+
+        private void btnDivide_Click(object sender, EventArgs e)
+        {
+            calHandle.operate("÷");
+        }
+
+        private void btnEqual_Click(object sender, EventArgs e)
+        {
+            calHandle.operate("=");
+            resultBox.Text = calHandle.Number;
+        }
     }
     class calculatorHandler
     {
-        string number;
+        private string number;
+        private string operand1;
+        private string operand2;
+        private string operateState;
         public calculatorHandler(string _number = "0")
         {
             number = _number;
+            operateState = null;
+            operand1 = "0";
+            operand2 = "0";
+        }
+        public void operate(string cmd)
+        {
+            switch(cmd)
+            {
+                case "＋":
+                    operand1 = number;
+                    operateState = "＋";
+                    break;
+                case "－":
+                    operand1 = number;
+                    operateState = "－";
+                    break;
+                case "×":
+                    operand1 = number;
+                    operateState = "×";
+                    break;
+                case "÷":
+                    operand1 = number;
+                    operateState = "÷";
+                    break;
+                case "=":
+                    switch (operateState)
+                    {
+                        case "＋":
+                            Number = (long.Parse(operand1) + long.Parse(operand2)).ToString();
+                            break;
+                        case "－":
+                            Number = (long.Parse(operand1) - long.Parse(operand2)).ToString();
+                            break;
+                        case "×":
+                            Number = (long.Parse(operand1) * long.Parse(operand2)).ToString();
+                            break;
+                        case "÷":
+                            Number = (long.Parse(operand1) / long.Parse(operand2)).ToString();
+                            break;
+                    }
+                    operateState = "=";
+                    break;
+            }
         }
         public void Cancel()
         {
             number = "0";
+            operand1 = "0";
+            operand2 = "0";
         }
         public void Add(string s)
         {
-            if (number == "0")
+            if (operateState == "=" || operateState == null)
             {
-                number = s;
+                if (number == "0")
+                {
+                    number = s;
+                }
+                else
+                {
+                    number = number + s;
+                }
             }
             else
             {
-                number = number + s;
+                if (operand2 == "0")
+                {
+                    operand2 = s;
+                }
+                else
+                {
+                    operand2 = operand2 + s;
+                }
             }
         }
         public string Number
