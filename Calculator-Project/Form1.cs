@@ -23,53 +23,134 @@ namespace Calculator_Project
         // 숫자 버튼 관련 이벤트
         private void btn0_Click(object sender, EventArgs e)
         {
-            calHandle.Add("0");
-            resultBox.Text = calHandle.Number;
+            bool isOprand2_0 = true; // Operand2가 제로이냐?
+            calHandle.Add("0", ref isOprand2_0);
+            if (isOprand2_0 == true)
+            {
+                resultBox.Text = calHandle.Number;
+            }
+            else
+            {
+                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
+            }
         }
         private void btn1_Click(object sender, EventArgs e)
         {
-            calHandle.Add("1");
-            resultBox.Text = calHandle.Number;
+            bool isOprand2_0 = true; // Operand2가 제로이냐?
+
+            calHandle.Add("1", ref isOprand2_0);
+            if (isOprand2_0 == true)
+            {
+                resultBox.Text = calHandle.Number;
+            }
+            else
+            {
+                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
+            }
         }
         private void btn2_Click(object sender, EventArgs e)
         {
-            calHandle.Add("2");
-            resultBox.Text = calHandle.Number;
+            bool isOprand2_0 = true; // Operand2가 제로이냐?
+            calHandle.Add("2", ref isOprand2_0);
+            if (isOprand2_0 == true)
+            {
+                resultBox.Text = calHandle.Number;
+            }
+            else
+            {
+                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
+            }
         }
         private void btn3_Click(object sender, EventArgs e)
         {
-            calHandle.Add("3");
-            resultBox.Text = calHandle.Number;
+            bool isOprand2_0 = true; // Operand2가 제로이냐?
+            calHandle.Add("3", ref isOprand2_0);
+            if (isOprand2_0 == true)
+            {
+                resultBox.Text = calHandle.Number;
+            }
+            else
+            {
+                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
+            }
         }
         private void btn4_Click(object sender, EventArgs e)
         {
-            calHandle.Add("4");
-            resultBox.Text = calHandle.Number;
+            bool isOprand2_0 = true; // Operand2가 제로이냐?
+            calHandle.Add("4", ref isOprand2_0);
+            if (isOprand2_0 == true)
+            {
+                resultBox.Text = calHandle.Number;
+            }
+            else
+            {
+                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
+            }
         }
         private void btn5_Click(object sender, EventArgs e)
         {
-            calHandle.Add("5");
-            resultBox.Text = calHandle.Number;
+            bool isOprand2_0 = true; // Operand2가 제로이냐?
+            calHandle.Add("5", ref isOprand2_0);
+            if (isOprand2_0 == true)
+            {
+                resultBox.Text = calHandle.Number;
+            }
+            else
+            {
+                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
+            }
         }
         private void btn6_Click(object sender, EventArgs e)
         {
-            calHandle.Add("6");
-            resultBox.Text = calHandle.Number;
+            bool isOprand2_0 = true; // Operand2가 제로이냐?
+            calHandle.Add("6", ref isOprand2_0);
+            if (isOprand2_0 == true)
+            {
+                resultBox.Text = calHandle.Number;
+            }
+            else
+            {
+                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
+            }
         }
         private void btn7_Click(object sender, EventArgs e)
         {
-            calHandle.Add("7");
-            resultBox.Text = calHandle.Number;
+            bool isOprand2_0 = true; // Operand2가 제로이냐?
+            calHandle.Add("7", ref isOprand2_0);
+            if (isOprand2_0 == true)
+            {
+                resultBox.Text = calHandle.Number;
+            }
+            else
+            {
+                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
+            }
         }
         private void btn8_Click(object sender, EventArgs e)
         {
-            calHandle.Add("8");
-            resultBox.Text = calHandle.Number;
+            bool isOprand2_0 = true; // Operand2가 제로이냐?
+            calHandle.Add("8", ref isOprand2_0);
+            if (isOprand2_0 == true)
+            {
+                resultBox.Text = calHandle.Number;
+            }
+            else
+            {
+                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
+            }
         }
         private void btn9_Click(object sender, EventArgs e)
         {
-            calHandle.Add("9");
-            resultBox.Text = calHandle.Number;
+            bool isOprand2_0 = true; // Operand2가 제로이냐?
+            calHandle.Add("9", ref isOprand2_0);
+            if (isOprand2_0 == true)
+            {
+                resultBox.Text = calHandle.Number;
+            }
+            else
+            {
+                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -106,6 +187,7 @@ namespace Calculator_Project
             calHandle.operate("÷");
             resultBox.Text = string.Format("{0} ÷ ", calHandle.Operand1);
         }
+
         private void btnEqual_Click(object sender, EventArgs e)
         {
             calHandle.operate("=");
@@ -179,7 +261,7 @@ namespace Calculator_Project
             operand1 = "0";
             operand2 = "0";
         }
-        public string Add(string s)
+        public string Add(string s, ref bool isOp2_0)
         {
             if (operateState == "=" || operateState == null)
             {
@@ -193,15 +275,17 @@ namespace Calculator_Project
                 }
                 return number;
             }
-            else
+            else  // 사칙연산 버튼 누른 후
             {
                 if (operand2 == "0")
                 {
                     operand2 = s;
+                    isOp2_0 = true;
                 }
                 else
                 {
                     operand2 = operand2 + s;
+                    isOp2_0 = false;
                 }
                 return operand2;
             }
@@ -220,6 +304,11 @@ namespace Calculator_Project
         {
             get { return operand2; }
             set { operand2 = value; }
+        }
+        public string OperateState
+        {
+            get { return operateState; }
+            set { operateState = value; }
         }
         public override string ToString()
         {
