@@ -106,10 +106,10 @@ namespace Calculator_Project
             calHandle.operate("÷");
             resultBox.Text = string.Format("{0} ÷ ", calHandle.Operand1);
         }
-
         private void btnEqual_Click(object sender, EventArgs e)
         {
             calHandle.operate("=");
+            calHandle.Operand2 = "0";
             resultBox.Text = calHandle.Number;
         }
     }
@@ -152,25 +152,21 @@ namespace Calculator_Project
                         case "＋":
                             Number = (long.Parse(operand1) + long.Parse(operand2)).ToString();
                             operand1 = Number;
-                            operand2 = "0";
                             operateState = "=";
                             break;
                         case "－":
                             Number = (long.Parse(operand1) - long.Parse(operand2)).ToString();
                             operand1 = Number;
-                            operand2 = "0";
                             operateState = "=";
                             break;
                         case "×":
                             Number = (long.Parse(operand1) * long.Parse(operand2)).ToString();
                             operand1 = Number;
-                            operand2 = "0";
                             operateState = "=";
                             break;
                         case "÷":
                             Number = (long.Parse(operand1) / long.Parse(operand2)).ToString();
                             operand1 = Number;
-                            operand2 = "0";
                             operateState = "=";
                             break;
                     }
@@ -183,7 +179,7 @@ namespace Calculator_Project
             operand1 = "0";
             operand2 = "0";
         }
-        public void Add(string s)
+        public string Add(string s)
         {
             if (operateState == "=" || operateState == null)
             {
@@ -195,6 +191,7 @@ namespace Calculator_Project
                 {
                     number = number + s;
                 }
+                return number;
             }
             else
             {
@@ -206,6 +203,7 @@ namespace Calculator_Project
                 {
                     operand2 = operand2 + s;
                 }
+                return operand2;
             }
         }
         public string Number
