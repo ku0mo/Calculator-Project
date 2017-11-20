@@ -13,6 +13,7 @@ namespace Calculator_Project
     public partial class Calculator : Form
     {
         calculatorHandler calHandle = new calculatorHandler("0");
+        static int operateCount = 0;
         public Calculator()
         {
             InitializeComponent();
@@ -131,9 +132,20 @@ namespace Calculator_Project
             calHandle.Number = resultBox.Text;
         }
 
-        // 연산 관련 버튼 이벤트
+        // 연산 관련 버튼 이벤트 //
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if( calHandle.Operand2 == null)
+            {
+                operateCount++;
+            }
+            if(operateCount == 2)
+            {
+                resultBox.Text = "연산이 바뀌었습니다.";
+                operateCount = 0;
+                return;
+            }
             int isZero = calHandle.operate("＋");
             if (isZero == 0)
             {
@@ -145,17 +157,26 @@ namespace Calculator_Project
                 resultBox.Text = string.Format("{0} + ", calHandle.Operand1);
                 calHandle.OperateState = "＋";
             }
-
         }
 
         private void btnSubtract_Click(object sender, EventArgs e)
         {
+            if (calHandle.Operand2 == null)
+            {
+                operateCount++;
+            }
+            if (operateCount == 2)
+            {
+                resultBox.Text = "연산이 바뀌었습니다.";
+                operateCount = 0;
+
+                return;
+            }
             int isZero = calHandle.operate("－");
             if (isZero == 0)
             {
                 resultBox.Text = "0으로 나눌 수 없습니다.";
                 calHandle.Cancel();
-
             }
             else
             {
@@ -166,12 +187,22 @@ namespace Calculator_Project
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
+            if (calHandle.Operand2 == null)
+            {
+                operateCount++;
+            }
+            if (operateCount == 2)
+            {
+                resultBox.Text = "연산이 바뀌었습니다.";
+                operateCount = 0;
+
+                return;
+            }
             int isZero = calHandle.operate("×");
             if (isZero == 0)
             {
                 resultBox.Text = "0으로 나눌 수 없습니다.";
                 calHandle.Cancel();
-
             }
             else
             {
@@ -182,17 +213,28 @@ namespace Calculator_Project
 
         private void btnDivide_Click(object sender, EventArgs e)
         {
+            if (calHandle.Operand2 == null)
+            {
+                operateCount++;
+            }
+            if (operateCount == 2)
+            {
+                resultBox.Text = "연산이 바뀌었습니다.";
+                operateCount = 0;
+
+                return;
+            } 
             int isZero = calHandle.operate("÷");
             if (isZero == 0)
             {
                 resultBox.Text = "0으로 나눌 수 없습니다.";
                 calHandle.Cancel();
-
             }
             else
             {
                 resultBox.Text = string.Format("{0} ÷ ", calHandle.Operand1);
                 calHandle.OperateState = "÷";
+
             }
         }
 
@@ -203,13 +245,13 @@ namespace Calculator_Project
             {
                 resultBox.Text = "0으로 나눌 수 없습니다.";
                 calHandle.Cancel();
-
             }
             else
             {
                 calHandle.Operand2 = null;
                 resultBox.Text = calHandle.Number;
             }
+            operateCount = 0;
         }
     }
     class calculatorHandler
