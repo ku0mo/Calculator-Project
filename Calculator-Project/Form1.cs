@@ -23,136 +23,104 @@ namespace Calculator_Project
         // 숫자 버튼 관련 이벤트
         private void btn0_Click(object sender, EventArgs e)
         {
-            bool isOprand2_0 = true; // Operand2가 제로이냐?
-            calHandle.Add("0", ref isOprand2_0);
-            if (isOprand2_0 == true)
-            {
-                resultBox.Text = calHandle.Number;
-            }
-            else
+            calHandle.Add("0");
+
+            resultBox.Text = calHandle.Number;
+            if (calHandle.Operand2 != null)
             {
                 resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
             }
         }
         private void btn1_Click(object sender, EventArgs e)
         {
-            bool isOprand2_0 = true; // Operand2가 제로이냐?
+            calHandle.Add("1");
 
-            calHandle.Add("1", ref isOprand2_0);
-            if (isOprand2_0 == true)
-            {
-                resultBox.Text = calHandle.Number;
-            }
-            else
+            resultBox.Text = calHandle.Number;
+            if (calHandle.Operand2 != null)
             {
                 resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
             }
         }
         private void btn2_Click(object sender, EventArgs e)
         {
-            bool isOprand2_0 = true; // Operand2가 제로이냐?
-            calHandle.Add("2", ref isOprand2_0);
-            if (isOprand2_0 == true)
-            {
-                resultBox.Text = calHandle.Number;
-            }
-            else
+            calHandle.Add("2");
+
+            resultBox.Text = calHandle.Number;
+            if (calHandle.Operand2 != null)
             {
                 resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
             }
         }
         private void btn3_Click(object sender, EventArgs e)
         {
-            bool isOprand2_0 = true; // Operand2가 제로이냐?
-            calHandle.Add("3", ref isOprand2_0);
-            if (isOprand2_0 == true)
-            {
-                resultBox.Text = calHandle.Number;
-            }
-            else
+            calHandle.Add("3");
+
+            resultBox.Text = calHandle.Number;
+            if (calHandle.Operand2 != null)
             {
                 resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
             }
         }
         private void btn4_Click(object sender, EventArgs e)
         {
-            bool isOprand2_0 = true; // Operand2가 제로이냐?
-            calHandle.Add("4", ref isOprand2_0);
-            if (isOprand2_0 == true)
-            {
-                resultBox.Text = calHandle.Number;
-            }
-            else
+            calHandle.Add("4");
+
+            resultBox.Text = calHandle.Number;
+            if (calHandle.Operand2 != null)
             {
                 resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
             }
         }
         private void btn5_Click(object sender, EventArgs e)
         {
-            bool isOprand2_0 = true; // Operand2가 제로이냐?
-            calHandle.Add("5", ref isOprand2_0);
-            if (isOprand2_0 == true)
-            {
-                resultBox.Text = calHandle.Number;
-            }
-            else
+            calHandle.Add("5");
+
+            resultBox.Text = calHandle.Number;
+            if (calHandle.Operand2 != null)
             {
                 resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
             }
         }
         private void btn6_Click(object sender, EventArgs e)
         {
-            bool isOprand2_0 = true; // Operand2가 제로이냐?
-            calHandle.Add("6", ref isOprand2_0);
-            if (isOprand2_0 == true)
-            {
-                resultBox.Text = calHandle.Number;
-            }
-            else
+            calHandle.Add("6");
+
+            resultBox.Text = calHandle.Number;
+            if (calHandle.Operand2 != null)
             {
                 resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
             }
         }
         private void btn7_Click(object sender, EventArgs e)
         {
-            bool isOprand2_0 = true; // Operand2가 제로이냐?
-            calHandle.Add("7", ref isOprand2_0);
-            if (isOprand2_0 == true)
-            {
-                resultBox.Text = calHandle.Number;
-            }
-            else
+            calHandle.Add("7");
+
+            resultBox.Text = calHandle.Number;
+            if (calHandle.Operand2 != null)
             {
                 resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
             }
         }
         private void btn8_Click(object sender, EventArgs e)
         {
-            bool isOprand2_0 = true; // Operand2가 제로이냐?
-            calHandle.Add("8", ref isOprand2_0);
-            if (isOprand2_0 == true)
-            {
-                resultBox.Text = calHandle.Number;
-            }
-            else
+            calHandle.Add("8");
+
+            resultBox.Text = calHandle.Number;
+            if (calHandle.Operand2 != null)
             {
                 resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
             }
         }
         private void btn9_Click(object sender, EventArgs e)
         {
-            bool isOprand2_0 = true; // Operand2가 제로이냐?
-            calHandle.Add("9", ref isOprand2_0);
-            if (isOprand2_0 == true)
-            {
-                resultBox.Text = calHandle.Number;
-            }
-            else
+            calHandle.Add("9");
+
+            resultBox.Text = calHandle.Number;
+            if (calHandle.Operand2 != null)
             {
                 resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
             }
         }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             calHandle.Cancel();
@@ -166,32 +134,40 @@ namespace Calculator_Project
         // 연산 관련 버튼 이벤트
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            calHandle.operate();
             calHandle.operate("＋");
             resultBox.Text = string.Format("{0} + ", calHandle.Operand1);
+            calHandle.OperateState = "＋";
         }
 
         private void btnSubtract_Click(object sender, EventArgs e)
         {
+            calHandle.operate();
             calHandle.operate("－");
             resultBox.Text = string.Format("{0} - ", calHandle.Operand1);
+            calHandle.OperateState = "－";
         }
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
+            calHandle.operate();
             calHandle.operate("×");
             resultBox.Text = string.Format("{0} × ", calHandle.Operand1);
+            calHandle.OperateState = "×";
         }
 
         private void btnDivide_Click(object sender, EventArgs e)
         {
+            calHandle.operate();
             calHandle.operate("÷");
             resultBox.Text = string.Format("{0} ÷ ", calHandle.Operand1);
+            calHandle.OperateState = "÷";
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
             calHandle.operate("=");
-            calHandle.Operand2 = "0";
+            calHandle.Operand2 = null;
             resultBox.Text = calHandle.Number;
         }
     }
@@ -206,27 +182,76 @@ namespace Calculator_Project
             number = _number;
             operateState = null;
             operand1 = "0";
-            operand2 = "0";
+            operand2 = null;
+        }
+        public void operate()
+        {
+            if (operateState == null)
+                return;
+
+            switch(operateState)
+            {
+                case "+":
+                    operand1 = (long.Parse(operand1) + long.Parse(operand2)).ToString();
+                    break;
+                case "-":
+                    operand1 = (long.Parse(operand1) - long.Parse(operand2)).ToString();
+                    break;
+                case "×":
+                    operand1 = (long.Parse(operand1) * long.Parse(operand2)).ToString();
+                    break;
+                case "÷":
+                    operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
+                    break;
+            }
         }
         public void operate(string cmd)
         {
-            switch(cmd)
+            switch(cmd) //현재 명령어
             {
                 case "＋":
-                    operand1 = number;
-                    operateState = "＋";
+                    if( operand2 != null)
+                    {
+                        operand1 = (long.Parse(operand1) + long.Parse(operand2)).ToString();
+                        operand2 = null;
+                    }
+                    else
+                    {
+                        operand1 = number;
+                    }
                     break;
                 case "－":
-                    operand1 = number;
-                    operateState = "－";
+                    if (operand2 != null)
+                    {
+                        operand1 = (long.Parse(operand1) - long.Parse(operand2)).ToString();
+                        operand2 = null;
+                    }
+                    else
+                    {
+                        operand1 = number;
+                    }
                     break;
                 case "×":
-                    operand1 = number;
-                    operateState = "×";
+                    if (operand2 != null)
+                    {
+                        operand1 = (long.Parse(operand1) * long.Parse(operand2)).ToString();
+                        operand2 = null;
+                    }
+                    else
+                    {
+                        operand1 = number;
+                    }
                     break;
                 case "÷":
-                    operand1 = number;
-                    operateState = "÷";
+                    if (operand2 != null)
+                    {
+                        operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
+                        operand2 = null;
+                    }
+                    else
+                    {
+                        operand1 = number;
+                    }
                     break;
                 case "=":
                     switch (operateState)
@@ -259,11 +284,11 @@ namespace Calculator_Project
         {
             number = "0";
             operand1 = "0";
-            operand2 = "0";
+            operand2 = null;
         }
-        public string Add(string s, ref bool isOp2_0)
+        public void Add(string s)
         {
-            if (operateState == "=" || operateState == null)
+            if (operateState == "=" || operateState == null) // 결과 or 처음
             {
                 if (number == "0")
                 {
@@ -273,21 +298,17 @@ namespace Calculator_Project
                 {
                     number = number + s;
                 }
-                return number;
             }
-            else  // 사칙연산 버튼 누른 후
+            else  // 사칙연산이 눌려진 상태
             {
-                if (operand2 == "0")
+                if (operand2 == null)
                 {
                     operand2 = s;
-                    isOp2_0 = true;
                 }
                 else
                 {
                     operand2 = operand2 + s;
-                    isOp2_0 = false;
                 }
-                return operand2;
             }
         }
         public string Number
