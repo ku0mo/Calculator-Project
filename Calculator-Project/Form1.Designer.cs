@@ -287,6 +287,7 @@
             this.btnSign.TabIndex = 20;
             this.btnSign.Text = "＋/－";
             this.btnSign.UseVisualStyleBackColor = true;
+            this.btnSign.Click += new System.EventHandler(this.btnSign_Click);
             // 
             // btnMsubtract
             // 

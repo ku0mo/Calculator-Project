@@ -257,6 +257,25 @@ namespace Calculator_Project
                 resultBox.Text = calHandle.Number;
             }
             operateCount = 0;
+            calHandle.OperateState = null;
+        }
+
+        private void btnSign_Click(object sender, EventArgs e)
+        {
+            if (calHandle.OperateState == null)
+            {
+                calHandle.Operand1 = ((long.Parse(calHandle.Number) * (-1)).ToString());
+                resultBox.Text = calHandle.Operand1;
+            }
+            else if(calHandle.Operand2 == null)
+            {
+                return;
+            }
+            else
+            {
+                calHandle.Operand2 = ((long.Parse(calHandle.Operand2) * (-1)).ToString());
+                resultBox.Text = string.Format("{0} {1} ({2})", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
+            }
         }
     }
     class calculatorHandler
