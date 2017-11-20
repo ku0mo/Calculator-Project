@@ -125,6 +125,7 @@ namespace Calculator_Project
         private void btnCancel_Click(object sender, EventArgs e)
         {
             calHandle.Cancel();
+            operateCount = 0;
             resultBox.Text = calHandle.Number;
         }
         private void resultBox_TextChanged(object sender, EventArgs e)
