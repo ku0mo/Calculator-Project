@@ -144,6 +144,7 @@ namespace Calculator_Project
             if(operateCount == 2)
             {
                 resultBox.Text = "연산이 바뀌었습니다.";
+                calHandle.Cancel();
                 operateCount = 0;
                 return;
             }
@@ -169,6 +170,7 @@ namespace Calculator_Project
             if (operateCount == 2)
             {
                 resultBox.Text = "연산이 바뀌었습니다.";
+                calHandle.Cancel();
                 operateCount = 0;
 
                 return;
@@ -195,6 +197,7 @@ namespace Calculator_Project
             if (operateCount == 2)
             {
                 resultBox.Text = "연산이 바뀌었습니다.";
+                calHandle.Cancel();
                 operateCount = 0;
 
                 return;
@@ -221,6 +224,7 @@ namespace Calculator_Project
             if (operateCount == 2)
             {
                 resultBox.Text = "연산이 바뀌었습니다.";
+                calHandle.Cancel();
                 operateCount = 0;
 
                 return;
