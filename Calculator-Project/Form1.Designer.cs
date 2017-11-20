@@ -230,10 +230,10 @@
             // 
             // resultBox
             // 
-            this.resultBox.Font = new System.Drawing.Font("굴림", 40.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.resultBox.Location = new System.Drawing.Point(316, 14);
+            this.resultBox.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.resultBox.Location = new System.Drawing.Point(316, 33);
             this.resultBox.Name = "resultBox";
-            this.resultBox.Size = new System.Drawing.Size(534, 84);
+            this.resultBox.Size = new System.Drawing.Size(534, 53);
             this.resultBox.TabIndex = 18;
             this.resultBox.TextChanged += new System.EventHandler(this.resultBox_TextChanged);
             // 

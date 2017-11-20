@@ -134,39 +134,82 @@ namespace Calculator_Project
         // 연산 관련 버튼 이벤트
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            calHandle.operate("＋");
-            resultBox.Text = string.Format("{0} + ", calHandle.Operand1);
-            calHandle.OperateState = "＋";
+            int isZero = calHandle.operate("＋");
+            if (isZero == 0)
+            {
+                resultBox.Text = "0으로 나눌 수 없습니다.";
+                calHandle.Cancel();
+            }
+            else
+            {
+                resultBox.Text = string.Format("{0} + ", calHandle.Operand1);
+                calHandle.OperateState = "＋";
+            }
 
         }
 
         private void btnSubtract_Click(object sender, EventArgs e)
         {
-            calHandle.operate("－");
-            resultBox.Text = string.Format("{0} - ", calHandle.Operand1);
-            calHandle.OperateState = "－";
+            int isZero = calHandle.operate("－");
+            if (isZero == 0)
+            {
+                resultBox.Text = "0으로 나눌 수 없습니다.";
+                calHandle.Cancel();
+
+            }
+            else
+            {
+                resultBox.Text = string.Format("{0} - ", calHandle.Operand1);
+                calHandle.OperateState = "－";
+            }
         }
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
-            calHandle.operate("×");
-            resultBox.Text = string.Format("{0} × ", calHandle.Operand1);
-            calHandle.OperateState = "×";
+            int isZero = calHandle.operate("×");
+            if (isZero == 0)
+            {
+                resultBox.Text = "0으로 나눌 수 없습니다.";
+                calHandle.Cancel();
+
+            }
+            else
+            {
+                resultBox.Text = string.Format("{0} × ", calHandle.Operand1);
+                calHandle.OperateState = "×";
+            }
         }
 
         private void btnDivide_Click(object sender, EventArgs e)
         {
+            int isZero = calHandle.operate("÷");
+            if (isZero == 0)
+            {
+                resultBox.Text = "0으로 나눌 수 없습니다.";
+                calHandle.Cancel();
 
-            calHandle.operate("÷");
-            resultBox.Text = string.Format("{0} ÷ ", calHandle.Operand1);
-            calHandle.OperateState = "÷";
+            }
+            else
+            {
+                resultBox.Text = string.Format("{0} ÷ ", calHandle.Operand1);
+                calHandle.OperateState = "÷";
+            }
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            calHandle.operate("=");
-            calHandle.Operand2 = null;
-            resultBox.Text = calHandle.Number;
+            int isZero = calHandle.operate("=");
+            if (isZero == 0)
+            {
+                resultBox.Text = "0으로 나눌 수 없습니다.";
+                calHandle.Cancel();
+
+            }
+            else
+            {
+                calHandle.Operand2 = null;
+                resultBox.Text = calHandle.Number;
+            }
         }
     }
     class calculatorHandler
@@ -183,7 +226,7 @@ namespace Calculator_Project
             operand2 = null;
         }
 
-        public void operate(string cmd)
+        public int operate(string cmd)
         {
             switch(cmd) //현재 명령어
             {
@@ -205,11 +248,17 @@ namespace Calculator_Project
                                 operand2 = null;
                                 break;
                             case "÷":
-                                operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
-                                operand2 = null;
+                                if (operand2 == "0")
+                                {
+                                    return 0; // 0으로 나누기 하면 0리턴
+                                }
+                                else
+                                {
+                                    operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
+                                    operand2 = null;
+                                }
                                 break;
                         }
-
                     }
                     else
                     {
@@ -234,8 +283,15 @@ namespace Calculator_Project
                                 operand2 = null;
                                 break;
                             case "÷":
-                                operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
-                                operand2 = null;
+                                if (operand2 == "0")
+                                {
+                                    return 0;
+                                }
+                                else
+                                {
+                                    operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
+                                    operand2 = null;
+                                }
                                 break;
                         }
 
@@ -263,8 +319,15 @@ namespace Calculator_Project
                                 operand2 = null;
                                 break;
                             case "÷":
-                                operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
-                                operand2 = null;
+                                if (operand2 == "0")
+                                {
+                                    return 0;
+                                }
+                                else
+                                {
+                                    operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
+                                    operand2 = null;
+                                }
                                 break;
                         }
 
@@ -292,8 +355,15 @@ namespace Calculator_Project
                                 operand2 = null;
                                 break;
                             case "÷":
-                                operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
-                                operand2 = null;
+                                if (operand2 == "0")
+                                {
+                                    return 0;
+                                }
+                                else
+                                {
+                                    operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
+                                    operand2 = null;
+                                }
                                 break;
                         }
 
@@ -322,19 +392,28 @@ namespace Calculator_Project
                             operateState = "=";
                             break;
                         case "÷":
-                            Number = (long.Parse(operand1) / long.Parse(operand2)).ToString();
-                            operand1 = Number;
-                            operateState = "=";
+                            if (Operand2 == "0")
+                            {
+                                return 0;
+                            }
+                            else
+                            {
+                                Number = (long.Parse(operand1) / long.Parse(operand2)).ToString();
+                                operand1 = Number;
+                                operateState = "=";
+                            }
                             break;
                     }
                     break;
             }
+            return 1;
         }
         public void Cancel()
         {
             number = "0";
             operand1 = "0";
             operand2 = null;
+            operateState = null;
         }
         public void Add(string s)
         {
