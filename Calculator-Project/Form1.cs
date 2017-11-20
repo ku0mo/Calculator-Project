@@ -134,15 +134,14 @@ namespace Calculator_Project
         // 연산 관련 버튼 이벤트
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            calHandle.operate();
             calHandle.operate("＋");
             resultBox.Text = string.Format("{0} + ", calHandle.Operand1);
             calHandle.OperateState = "＋";
+
         }
 
         private void btnSubtract_Click(object sender, EventArgs e)
         {
-            calHandle.operate();
             calHandle.operate("－");
             resultBox.Text = string.Format("{0} - ", calHandle.Operand1);
             calHandle.OperateState = "－";
@@ -150,7 +149,6 @@ namespace Calculator_Project
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
-            calHandle.operate();
             calHandle.operate("×");
             resultBox.Text = string.Format("{0} × ", calHandle.Operand1);
             calHandle.OperateState = "×";
@@ -158,7 +156,7 @@ namespace Calculator_Project
 
         private void btnDivide_Click(object sender, EventArgs e)
         {
-            calHandle.operate();
+
             calHandle.operate("÷");
             resultBox.Text = string.Format("{0} ÷ ", calHandle.Operand1);
             calHandle.OperateState = "÷";
@@ -184,27 +182,7 @@ namespace Calculator_Project
             operand1 = "0";
             operand2 = null;
         }
-        public void operate()
-        {
-            if (operateState == null)
-                return;
 
-            switch(operateState)
-            {
-                case "+":
-                    operand1 = (long.Parse(operand1) + long.Parse(operand2)).ToString();
-                    break;
-                case "-":
-                    operand1 = (long.Parse(operand1) - long.Parse(operand2)).ToString();
-                    break;
-                case "×":
-                    operand1 = (long.Parse(operand1) * long.Parse(operand2)).ToString();
-                    break;
-                case "÷":
-                    operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
-                    break;
-            }
-        }
         public void operate(string cmd)
         {
             switch(cmd) //현재 명령어
@@ -212,8 +190,26 @@ namespace Calculator_Project
                 case "＋":
                     if( operand2 != null)
                     {
-                        operand1 = (long.Parse(operand1) + long.Parse(operand2)).ToString();
-                        operand2 = null;
+                        switch(OperateState)
+                        {
+                            case "＋":
+                                operand1 = (long.Parse(operand1) + long.Parse(operand2)).ToString();
+                                operand2 = null;
+                                break;
+                            case "－":
+                                operand1 = (long.Parse(operand1) - long.Parse(operand2)).ToString();
+                                operand2 = null;
+                                break;
+                            case "×":
+                                operand1 = (long.Parse(operand1) * long.Parse(operand2)).ToString();
+                                operand2 = null;
+                                break;
+                            case "÷":
+                                operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
+                                operand2 = null;
+                                break;
+                        }
+
                     }
                     else
                     {
@@ -223,8 +219,26 @@ namespace Calculator_Project
                 case "－":
                     if (operand2 != null)
                     {
-                        operand1 = (long.Parse(operand1) - long.Parse(operand2)).ToString();
-                        operand2 = null;
+                        switch (OperateState)
+                        {
+                            case "＋":
+                                operand1 = (long.Parse(operand1) + long.Parse(operand2)).ToString();
+                                operand2 = null;
+                                break;
+                            case "－":
+                                operand1 = (long.Parse(operand1) - long.Parse(operand2)).ToString();
+                                operand2 = null;
+                                break;
+                            case "×":
+                                operand1 = (long.Parse(operand1) * long.Parse(operand2)).ToString();
+                                operand2 = null;
+                                break;
+                            case "÷":
+                                operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
+                                operand2 = null;
+                                break;
+                        }
+
                     }
                     else
                     {
@@ -234,8 +248,26 @@ namespace Calculator_Project
                 case "×":
                     if (operand2 != null)
                     {
-                        operand1 = (long.Parse(operand1) * long.Parse(operand2)).ToString();
-                        operand2 = null;
+                        switch (OperateState)
+                        {
+                            case "＋":
+                                operand1 = (long.Parse(operand1) + long.Parse(operand2)).ToString();
+                                operand2 = null;
+                                break;
+                            case "－":
+                                operand1 = (long.Parse(operand1) - long.Parse(operand2)).ToString();
+                                operand2 = null;
+                                break;
+                            case "×":
+                                operand1 = (long.Parse(operand1) * long.Parse(operand2)).ToString();
+                                operand2 = null;
+                                break;
+                            case "÷":
+                                operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
+                                operand2 = null;
+                                break;
+                        }
+
                     }
                     else
                     {
@@ -245,8 +277,26 @@ namespace Calculator_Project
                 case "÷":
                     if (operand2 != null)
                     {
-                        operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
-                        operand2 = null;
+                        switch (OperateState)
+                        {
+                            case "＋":
+                                operand1 = (long.Parse(operand1) + long.Parse(operand2)).ToString();
+                                operand2 = null;
+                                break;
+                            case "－":
+                                operand1 = (long.Parse(operand1) - long.Parse(operand2)).ToString();
+                                operand2 = null;
+                                break;
+                            case "×":
+                                operand1 = (long.Parse(operand1) * long.Parse(operand2)).ToString();
+                                operand2 = null;
+                                break;
+                            case "÷":
+                                operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
+                                operand2 = null;
+                                break;
+                        }
+
                     }
                     else
                     {
