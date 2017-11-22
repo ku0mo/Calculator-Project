@@ -14,6 +14,14 @@ namespace Calculator_Project
     {
         calculatorHandler calHandle = new calculatorHandler("0");
         static int operateCount = 0;
+        void PrintOperandResult()
+        {
+            resultBox.Text = calHandle.Number;
+            if (calHandle.Operand2 != null)
+            {
+                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
+            }
+        }
         public Calculator()
         {
             InitializeComponent();
@@ -21,106 +29,60 @@ namespace Calculator_Project
         private void Calculator_Load(object sender, EventArgs e)
         {
         }
+
         // 숫자 버튼 관련 이벤트
         private void btn0_Click(object sender, EventArgs e)
         {
             calHandle.Add("0");
+            PrintOperandResult();
 
-            resultBox.Text = calHandle.Number;
-            if (calHandle.Operand2 != null)
-            {
-                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
-            }
         }
         private void btn1_Click(object sender, EventArgs e)
         {
             calHandle.Add("1");
+            PrintOperandResult();
 
-            resultBox.Text = calHandle.Number;
-            if (calHandle.Operand2 != null)
-            {
-                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
-            }
         }
         private void btn2_Click(object sender, EventArgs e)
         {
             calHandle.Add("2");
-
-            resultBox.Text = calHandle.Number;
-            if (calHandle.Operand2 != null)
-            {
-                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
-            }
+            PrintOperandResult();
         }
         private void btn3_Click(object sender, EventArgs e)
         {
             calHandle.Add("3");
 
-            resultBox.Text = calHandle.Number;
-            if (calHandle.Operand2 != null)
-            {
-                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
-            }
+            PrintOperandResult();
         }
         private void btn4_Click(object sender, EventArgs e)
         {
             calHandle.Add("4");
-
-            resultBox.Text = calHandle.Number;
-            if (calHandle.Operand2 != null)
-            {
-                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
-            }
+            PrintOperandResult();
         }
         private void btn5_Click(object sender, EventArgs e)
         {
             calHandle.Add("5");
-
-            resultBox.Text = calHandle.Number;
-            if (calHandle.Operand2 != null)
-            {
-                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
-            }
+            PrintOperandResult();
         }
         private void btn6_Click(object sender, EventArgs e)
         {
             calHandle.Add("6");
-
-            resultBox.Text = calHandle.Number;
-            if (calHandle.Operand2 != null)
-            {
-                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
-            }
+            PrintOperandResult();
         }
         private void btn7_Click(object sender, EventArgs e)
         {
             calHandle.Add("7");
-
-            resultBox.Text = calHandle.Number;
-            if (calHandle.Operand2 != null)
-            {
-                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
-            }
+            PrintOperandResult();
         }
         private void btn8_Click(object sender, EventArgs e)
         {
             calHandle.Add("8");
-
-            resultBox.Text = calHandle.Number;
-            if (calHandle.Operand2 != null)
-            {
-                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
-            }
+            PrintOperandResult();
         }
         private void btn9_Click(object sender, EventArgs e)
         {
             calHandle.Add("9");
-
-            resultBox.Text = calHandle.Number;
-            if (calHandle.Operand2 != null)
-            {
-                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
-            }
+            PrintOperandResult();
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -137,11 +99,11 @@ namespace Calculator_Project
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if( calHandle.Operand2 == null)
+            if (calHandle.Operand2 == null)
             {
                 operateCount++;
             }
-            if(operateCount == 2)
+            if (operateCount == 2)
             {
                 resultBox.Text = "연산이 바뀌었습니다.";
                 calHandle.Cancel();
@@ -228,7 +190,7 @@ namespace Calculator_Project
                 operateCount = 0;
 
                 return;
-            } 
+            }
             int isZero = calHandle.operate("÷");
             if (isZero == 0)
             {
@@ -264,271 +226,32 @@ namespace Calculator_Project
         {
             if (calHandle.OperateState == null)
             {
-                calHandle.Operand1 = ((long.Parse(calHandle.Number) * (-1)).ToString());
+                calHandle.Operand1 = ((double.Parse(calHandle.Number) * (-1)).ToString());
                 resultBox.Text = calHandle.Operand1;
             }
-            else if(calHandle.Operand2 == null)
+            else if (calHandle.Operand2 == null)
             {
                 return;
             }
-            else
+            else // operand2 부호 전환
             {
-                calHandle.Operand2 = ((long.Parse(calHandle.Operand2) * (-1)).ToString());
+                calHandle.Operand2 = ((double.Parse(calHandle.Operand2) * (-1)).ToString());
                 resultBox.Text = string.Format("{0} {1} ({2})", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
             }
         }
-    }
-    class calculatorHandler
-    {
-        private string number;
-        private string operand1;
-        private string operand2;
-        private string operateState;
-        public calculatorHandler(string _number = "0")
-        {
-            number = _number;
-            operateState = null;
-            operand1 = "0";
-            operand2 = null;
-        }
 
-        public int operate(string cmd)
+        private void btnDot_Click(object sender, EventArgs e)
         {
-            switch(cmd) //현재 명령어
+            for(int i = 0; i < calHandle.Number.Length; ++i)
             {
-                case "＋":
-                    if( operand2 != null)
-                    {
-                        switch(OperateState)
-                        {
-                            case "＋":
-                                operand1 = (long.Parse(operand1) + long.Parse(operand2)).ToString();
-                                operand2 = null;
-                                break;
-                            case "－":
-                                operand1 = (long.Parse(operand1) - long.Parse(operand2)).ToString();
-                                operand2 = null;
-                                break;
-                            case "×":
-                                operand1 = (long.Parse(operand1) * long.Parse(operand2)).ToString();
-                                operand2 = null;
-                                break;
-                            case "÷":
-                                if (operand2 == "0")
-                                {
-                                    return 0; // 0으로 나누기 하면 0리턴
-                                }
-                                else
-                                {
-                                    operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
-                                    operand2 = null;
-                                }
-                                break;
-                        }
-                    }
-                    else
-                    {
-                        operand1 = number;
-                    }
-                    break;
-                case "－":
-                    if (operand2 != null)
-                    {
-                        switch (OperateState)
-                        {
-                            case "＋":
-                                operand1 = (long.Parse(operand1) + long.Parse(operand2)).ToString();
-                                operand2 = null;
-                                break;
-                            case "－":
-                                operand1 = (long.Parse(operand1) - long.Parse(operand2)).ToString();
-                                operand2 = null;
-                                break;
-                            case "×":
-                                operand1 = (long.Parse(operand1) * long.Parse(operand2)).ToString();
-                                operand2 = null;
-                                break;
-                            case "÷":
-                                if (operand2 == "0")
-                                {
-                                    return 0;
-                                }
-                                else
-                                {
-                                    operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
-                                    operand2 = null;
-                                }
-                                break;
-                        }
-
-                    }
-                    else
-                    {
-                        operand1 = number;
-                    }
-                    break;
-                case "×":
-                    if (operand2 != null)
-                    {
-                        switch (OperateState)
-                        {
-                            case "＋":
-                                operand1 = (long.Parse(operand1) + long.Parse(operand2)).ToString();
-                                operand2 = null;
-                                break;
-                            case "－":
-                                operand1 = (long.Parse(operand1) - long.Parse(operand2)).ToString();
-                                operand2 = null;
-                                break;
-                            case "×":
-                                operand1 = (long.Parse(operand1) * long.Parse(operand2)).ToString();
-                                operand2 = null;
-                                break;
-                            case "÷":
-                                if (operand2 == "0")
-                                {
-                                    return 0;
-                                }
-                                else
-                                {
-                                    operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
-                                    operand2 = null;
-                                }
-                                break;
-                        }
-
-                    }
-                    else
-                    {
-                        operand1 = number;
-                    }
-                    break;
-                case "÷":
-                    if (operand2 != null)
-                    {
-                        switch (OperateState)
-                        {
-                            case "＋":
-                                operand1 = (long.Parse(operand1) + long.Parse(operand2)).ToString();
-                                operand2 = null;
-                                break;
-                            case "－":
-                                operand1 = (long.Parse(operand1) - long.Parse(operand2)).ToString();
-                                operand2 = null;
-                                break;
-                            case "×":
-                                operand1 = (long.Parse(operand1) * long.Parse(operand2)).ToString();
-                                operand2 = null;
-                                break;
-                            case "÷":
-                                if (operand2 == "0")
-                                {
-                                    return 0;
-                                }
-                                else
-                                {
-                                    operand1 = (long.Parse(operand1) / long.Parse(operand2)).ToString();
-                                    operand2 = null;
-                                }
-                                break;
-                        }
-
-                    }
-                    else
-                    {
-                        operand1 = number;
-                    }
-                    break;
-                case "=":
-                    switch (operateState)
-                    {
-                        case "＋":
-                            Number = (long.Parse(operand1) + long.Parse(operand2)).ToString();
-                            operand1 = Number;
-                            operateState = "=";
-                            break;
-                        case "－":
-                            Number = (long.Parse(operand1) - long.Parse(operand2)).ToString();
-                            operand1 = Number;
-                            operateState = "=";
-                            break;
-                        case "×":
-                            Number = (long.Parse(operand1) * long.Parse(operand2)).ToString();
-                            operand1 = Number;
-                            operateState = "=";
-                            break;
-                        case "÷":
-                            if (Operand2 == "0")
-                            {
-                                return 0;
-                            }
-                            else
-                            {
-                                Number = (long.Parse(operand1) / long.Parse(operand2)).ToString();
-                                operand1 = Number;
-                                operateState = "=";
-                            }
-                            break;
-                    }
-                    break;
-            }
-            return 1;
-        }
-        public void Cancel()
-        {
-            number = "0";
-            operand1 = "0";
-            operand2 = null;
-            operateState = null;
-        }
-        public void Add(string s)
-        {
-            if (operateState == "=" || operateState == null) // 결과 or 처음
-            {
-                if (number == "0")
+                if(calHandle.Number[i] == '.')
                 {
-                    number = s;
-                }
-                else
-                {
-                    number = number + s;
+                    return;
                 }
             }
-            else  // 사칙연산이 눌려진 상태
-            {
-                if (operand2 == null)
-                {
-                    operand2 = s;
-                }
-                else
-                {
-                    operand2 = operand2 + s;
-                }
-            }
-        }
-        public string Number
-        {
-            get { return number; }
-            set { number = value; }
-        }
-        public string Operand1
-        {
-            get { return operand1; }
-            set { operand1 = value; }
-        }
-        public string Operand2
-        {
-            get { return operand2; }
-            set { operand2 = value; }
-        }
-        public string OperateState
-        {
-            get { return operateState; }
-            set { operateState = value; }
-        }
-        public override string ToString()
-        {
-            return number;
+            calHandle.Number += ".";
+            resultBox.Text = calHandle.Number;
         }
     }
+    
 }
