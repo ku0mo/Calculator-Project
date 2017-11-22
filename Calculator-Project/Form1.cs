@@ -340,6 +340,9 @@ namespace Calculator_Project
                 case 111:
                     btnDivide_Click(sender, e);
                     break;
+                case 13:
+                    btnEqual_Click(sender, e);
+                    break;
             }
         }
     }
