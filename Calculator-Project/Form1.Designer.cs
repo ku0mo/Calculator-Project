@@ -196,7 +196,6 @@
             this.btnEqual.Name = "btnEqual";
             this.btnEqual.Size = new System.Drawing.Size(134, 86);
             this.btnEqual.TabIndex = 15;
-            this.btnEqual.TabStop = false;
             this.btnEqual.Text = "=";
             this.btnEqual.UseVisualStyleBackColor = true;
             this.btnEqual.Click += new System.EventHandler(this.btnEqual_Click);
