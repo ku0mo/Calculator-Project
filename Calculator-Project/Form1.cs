@@ -263,6 +263,85 @@ namespace Calculator_Project
                 resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
             }
         }
+
+        private void Calculator_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch(e.KeyValue)
+            {
+                case (char)48:
+                    btn0_Click(sender, e);
+                    break;
+                case (char)49:
+                    btn1_Click(sender, e);
+                    break;
+                case (char)50:
+                    btn2_Click(sender, e);
+                    break;
+                case (char)51:
+                    btn3_Click(sender, e);
+                    break;
+                case (char)52:
+                    btn4_Click(sender, e);
+                    break;
+                case (char)53:
+                    btn5_Click(sender, e);
+                    break;
+                case (char)54:
+                    btn6_Click(sender, e);
+                    break;
+                case (char)55:
+                    btn7_Click(sender, e);
+                    break;
+                case (char)56:
+                    btn8_Click(sender, e);
+                    break;
+                case (char)57:
+                    btn9_Click(sender, e);
+                    break;
+                case 96:
+                    btn0_Click(sender, e);
+                    break;
+                case 97:
+                    btn1_Click(sender, e);
+                    break;
+                case 98:
+                    btn2_Click(sender, e);
+                    break;
+                case 99:
+                    btn3_Click(sender, e);
+                    break;
+                case 100:
+                    btn4_Click(sender, e);
+                    break;
+                case 101:
+                    btn5_Click(sender, e);
+                    break;
+                case 102:
+                    btn6_Click(sender, e);
+                    break;
+                case 103:
+                    btn7_Click(sender, e);
+                    break;
+                case 104:
+                    btn8_Click(sender, e);
+                    break;
+                case 105:
+                    btn9_Click(sender, e);
+                    break;
+                case 107:
+                    btnAdd_Click(sender, e);
+                    break;
+                case 109:
+                    btnSubtract_Click(sender, e);
+                    break;
+                case 106:
+                    btnMultiply_Click(sender, e);
+                    break;
+                case 111:
+                    btnDivide_Click(sender, e);
+                    break;
+            }
+        }
     }
     
 }
