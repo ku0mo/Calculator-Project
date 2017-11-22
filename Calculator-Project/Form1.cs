@@ -29,19 +29,16 @@ namespace Calculator_Project
         private void Calculator_Load(object sender, EventArgs e)
         {
         }
-
         // 숫자 버튼 관련 이벤트
         private void btn0_Click(object sender, EventArgs e)
         {
             calHandle.Add("0");
             PrintOperandResult();
-
         }
         private void btn1_Click(object sender, EventArgs e)
         {
             calHandle.Add("1");
             PrintOperandResult();
-
         }
         private void btn2_Click(object sender, EventArgs e)
         {
@@ -51,7 +48,6 @@ namespace Calculator_Project
         private void btn3_Click(object sender, EventArgs e)
         {
             calHandle.Add("3");
-
             PrintOperandResult();
         }
         private void btn4_Click(object sender, EventArgs e)
@@ -242,15 +238,30 @@ namespace Calculator_Project
 
         private void btnDot_Click(object sender, EventArgs e)
         {
-            for(int i = 0; i < calHandle.Number.Length; ++i)
+            if (calHandle.Operand2 == null)
             {
-                if(calHandle.Number[i] == '.')
+                for (int i = 0; i < calHandle.Number.Length; ++i)
                 {
-                    return;
+                    if (calHandle.Number[i] == '.')
+                    {
+                        return;
+                    }
                 }
+                calHandle.Number += ".";
+                resultBox.Text = calHandle.Number;
             }
-            calHandle.Number += ".";
-            resultBox.Text = calHandle.Number;
+            else
+            {
+                for( int i=0; i < calHandle.Operand2.Length; ++i)
+                {
+                    if(calHandle.Operand2[i] == '.')
+                    {
+                        return;
+                    }
+                }
+                calHandle.Operand2 += '.';
+                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
+            }
         }
     }
     
