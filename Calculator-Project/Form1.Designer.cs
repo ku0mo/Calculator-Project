@@ -54,6 +54,8 @@
             this.btnMC = new System.Windows.Forms.Button();
             this.btnMadd = new System.Windows.Forms.Button();
             this.btnMR = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn8
@@ -290,11 +292,11 @@
             this.memoryBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.memoryBox.Font = new System.Drawing.Font("굴림", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.memoryBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.memoryBox.Location = new System.Drawing.Point(16, 41);
+            this.memoryBox.Location = new System.Drawing.Point(16, 113);
             this.memoryBox.Multiline = true;
             this.memoryBox.Name = "memoryBox";
             this.memoryBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.memoryBox.Size = new System.Drawing.Size(305, 615);
+            this.memoryBox.Size = new System.Drawing.Size(305, 543);
             this.memoryBox.TabIndex = 19;
             // 
             // btnDivide
@@ -402,12 +404,37 @@
             this.btnMR.Text = "MR";
             this.btnMR.UseVisualStyleBackColor = false;
             // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("굴림", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox2.Location = new System.Drawing.Point(76, 41);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(225, 50);
+            this.textBox2.TabIndex = 28;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Font = new System.Drawing.Font("굴림", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(21, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 38);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "M";
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(887, 678);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btnMsubtract);
             this.Controls.Add(this.btnMC);
             this.Controls.Add(this.btnMadd);
@@ -472,6 +499,8 @@
         private System.Windows.Forms.Button btnMC;
         private System.Windows.Forms.Button btnMadd;
         private System.Windows.Forms.Button btnMR;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

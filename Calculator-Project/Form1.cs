@@ -45,6 +45,7 @@ namespace Calculator_Project
             if (calHandle.OperateState == "=") // = 클릭했을 때
             {
                 memoryBox.Text += "-------------------------" + Environment.NewLine;
+                memoryBox.Text += "=";
                 memoryBox.Text += resultBox.Text + Environment.NewLine + Environment.NewLine + Environment.NewLine;
             }
         }
@@ -393,6 +394,13 @@ namespace Calculator_Project
                 case 13:
                     btnEqual_Click(sender, e);
                     break;
+                case 110:
+                    btnDot_Click(sender, e);
+                    break;
+                case 8:
+                    btnCancel_Click(sender, e);
+                    break;
+
             }
         }
     }
