@@ -30,20 +30,23 @@ namespace Calculator_Project
             {
                 memoryBox.Text += string.Format("{0}", calHandle.Operand2) + Environment.NewLine;
 
-                if (calHandle.OperateState != "=" && calHandle.OperateState != null) //연속 계산 시
-                    memoryBox.Text += string.Format("\t\t{0}", calHandle.OperateState) + Environment.NewLine;
+                if (calHandle.OperateState != "=" && calHandle.OperateState != null)
+                { //연속 계산 시
+                    memoryBox.Text += string.Format("\t{0}", calHandle.OperateState) + Environment.NewLine;
+                    resultBox.Text = calHandle.Operand1;
+                }
 
-                calHandle.Operand2 = null;
+                    calHandle.Operand2 = null;
             }
             else
             {
                 memoryBox.Text += calHandle.Operand1 + Environment.NewLine +
-                 string.Format("\t\t{0}", calHandle.OperateState) + Environment.NewLine;
+                 string.Format("\t{0}", calHandle.OperateState) + Environment.NewLine;
             }
 
             if (calHandle.OperateState == "=") // = 클릭했을 때
             {
-                memoryBox.Text += "--------------------------" + Environment.NewLine;
+                memoryBox.Text += "-------------------------" + Environment.NewLine;
                 memoryBox.Text += resultBox.Text + Environment.NewLine + Environment.NewLine + Environment.NewLine;
             }
         }
@@ -59,51 +62,61 @@ namespace Calculator_Project
         {
             calHandle.Add("0");
             PrintOperandResult();
+            btnEqual.Focus();
         }
         private void btn1_Click(object sender, EventArgs e)
         {
             calHandle.Add("1");
             PrintOperandResult();
+            btnEqual.Focus();
         }
         private void btn2_Click(object sender, EventArgs e)
         {
             calHandle.Add("2");
             PrintOperandResult();
+            btnEqual.Focus();
         }
         private void btn3_Click(object sender, EventArgs e)
         {
             calHandle.Add("3");
             PrintOperandResult();
+            btnEqual.Focus();
         }
         private void btn4_Click(object sender, EventArgs e)
         {
             calHandle.Add("4");
             PrintOperandResult();
+            btnEqual.Focus();
         }
         private void btn5_Click(object sender, EventArgs e)
         {
             calHandle.Add("5");
             PrintOperandResult();
+            btnEqual.Focus();
         }
         private void btn6_Click(object sender, EventArgs e)
         {
             calHandle.Add("6");
             PrintOperandResult();
+            btnEqual.Focus();
         }
         private void btn7_Click(object sender, EventArgs e)
         {
             calHandle.Add("7");
             PrintOperandResult();
+            btnEqual.Focus();
         }
         private void btn8_Click(object sender, EventArgs e)
         {
             calHandle.Add("8");
             PrintOperandResult();
+            btnEqual.Focus();
         }
         private void btn9_Click(object sender, EventArgs e)
         {
             calHandle.Add("9");
             PrintOperandResult();
+            btnEqual.Focus();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -111,10 +124,12 @@ namespace Calculator_Project
             calHandle.Cancel();
             operateCount = 0;
             resultBox.Text = calHandle.Number;
+            btnEqual.Focus();
         }
         private void resultBox_TextChanged(object sender, EventArgs e)
         {
             calHandle.Number = resultBox.Text;
+            btnEqual.Focus();
         }
 
         // 연산 관련 버튼 이벤트 //
@@ -144,6 +159,7 @@ namespace Calculator_Project
                 calHandle.OperateState = "＋";
                 PrintMemoryBox();
             }
+            btnEqual.Focus();
         }
 
         private void btnSubtract_Click(object sender, EventArgs e)
@@ -172,6 +188,7 @@ namespace Calculator_Project
                 calHandle.OperateState = "－";
                 PrintMemoryBox();
             }
+            btnEqual.Focus();
         }
 
         private void btnMultiply_Click(object sender, EventArgs e)
@@ -200,6 +217,7 @@ namespace Calculator_Project
                 calHandle.OperateState = "×";
                 PrintMemoryBox();
             }
+            btnEqual.Focus();
         }
 
         private void btnDivide_Click(object sender, EventArgs e)
@@ -229,6 +247,7 @@ namespace Calculator_Project
                 PrintMemoryBox();
 
             }
+            btnEqual.Focus();
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
@@ -264,6 +283,7 @@ namespace Calculator_Project
                 calHandle.Operand2 = ((double.Parse(calHandle.Operand2) * (-1)).ToString());
                 resultBox.Text = string.Format("{0} {1} ({2})", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
             }
+            btnEqual.Focus();
         }
 
         private void btnDot_Click(object sender, EventArgs e)
@@ -292,6 +312,7 @@ namespace Calculator_Project
                 calHandle.Operand2 += '.';
                 resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
             }
+            btnEqual.Focus();
         }
 
         private void Calculator_KeyDown(object sender, KeyEventArgs e)
@@ -369,6 +390,9 @@ namespace Calculator_Project
                     break;
                 case 111:
                     btnDivide_Click(sender, e);
+                    break;
+                case 13:
+                    btnEqual_Click(sender, e);
                     break;
             }
         }

@@ -288,6 +288,7 @@
             // 
             this.memoryBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.memoryBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.memoryBox.Font = new System.Drawing.Font("굴림", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.memoryBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.memoryBox.Location = new System.Drawing.Point(16, 41);
             this.memoryBox.Multiline = true;
