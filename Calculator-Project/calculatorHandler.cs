@@ -11,6 +11,7 @@ namespace Calculator_Project
         private string number;
         private string operand1;
         private string operand2;
+        //private string result;
         private string operateState;
         private string decimalNumber;
 
@@ -20,6 +21,7 @@ namespace Calculator_Project
             operateState = null;
             operand1 = "0";
             operand2 = null;
+            //result = "0";
             decimalNumber = null;
         }
 
@@ -34,15 +36,15 @@ namespace Calculator_Project
                         {
                             case "＋":
                                 operand1 = (double.Parse(operand1) + double.Parse(operand2)).ToString();
-                                operand2 = null;
+                                //operand2 = null;
                                 break;
                             case "－":
                                 operand1 = (double.Parse(operand1) - double.Parse(operand2)).ToString();
-                                operand2 = null;
+                                //operand2 = null;
                                 break;
                             case "×":
                                 operand1 = (double.Parse(operand1) * double.Parse(operand2)).ToString();
-                                operand2 = null;
+                                //operand2 = null;
                                 break;
                             case "÷":
                                 if (operand2 == "0")
@@ -52,7 +54,7 @@ namespace Calculator_Project
                                 else
                                 {
                                     operand1 = (double.Parse(operand1) / double.Parse(operand2)).ToString();
-                                    operand2 = null;
+                                    //operand2 = null;
                                 }
                                 break;
                         }
@@ -69,15 +71,15 @@ namespace Calculator_Project
                         {
                             case "＋":
                                 operand1 = (double.Parse(operand1) + double.Parse(operand2)).ToString();
-                                operand2 = null;
+                                //operand2 = null;
                                 break;
                             case "－":
                                 operand1 = (double.Parse(operand1) - double.Parse(operand2)).ToString();
-                                operand2 = null;
+                                //operand2 = null;
                                 break;
                             case "×":
                                 operand1 = (double.Parse(operand1) * double.Parse(operand2)).ToString();
-                                operand2 = null;
+                                //operand2 = null;
                                 break;
                             case "÷":
                                 if (operand2 == "0")
@@ -87,7 +89,7 @@ namespace Calculator_Project
                                 else
                                 {
                                     operand1 = (double.Parse(operand1) / double.Parse(operand2)).ToString();
-                                    operand2 = null;
+                                    // operand2 = null;
                                 }
                                 break;
                         }
@@ -105,15 +107,15 @@ namespace Calculator_Project
                         {
                             case "＋":
                                 operand1 = (double.Parse(operand1) + double.Parse(operand2)).ToString();
-                                operand2 = null;
+                                // operand2 = null;
                                 break;
                             case "－":
                                 operand1 = (double.Parse(operand1) - double.Parse(operand2)).ToString();
-                                operand2 = null;
+                                //operand2 = null;
                                 break;
                             case "×":
                                 operand1 = (double.Parse(operand1) * double.Parse(operand2)).ToString();
-                                operand2 = null;
+                                //operand2 = null;
                                 break;
                             case "÷":
                                 if (operand2 == "0")
@@ -123,7 +125,7 @@ namespace Calculator_Project
                                 else
                                 {
                                     operand1 = (double.Parse(operand1) / double.Parse(operand2)).ToString();
-                                    operand2 = null;
+                                    // operand2 = null;
                                 }
                                 break;
                         }
@@ -141,15 +143,15 @@ namespace Calculator_Project
                         {
                             case "＋":
                                 operand1 = (double.Parse(operand1) + double.Parse(operand2)).ToString();
-                                operand2 = null;
+                                //operand2 = null;
                                 break;
                             case "－":
                                 operand1 = (double.Parse(operand1) - double.Parse(operand2)).ToString();
-                                operand2 = null;
+                                //operand2 = null;
                                 break;
                             case "×":
                                 operand1 = (double.Parse(operand1) * double.Parse(operand2)).ToString();
-                                operand2 = null;
+                                //operand2 = null;
                                 break;
                             case "÷":
                                 if (operand2 == "0")
@@ -159,7 +161,7 @@ namespace Calculator_Project
                                 else
                                 {
                                     operand1 = (double.Parse(operand1) / double.Parse(operand2)).ToString();
-                                    operand2 = null;
+                                    //operand2 = null;
                                 }
                                 break;
                         }

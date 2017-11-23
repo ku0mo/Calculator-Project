@@ -58,182 +58,211 @@
             // 
             // btn8
             // 
+            this.btn8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn8.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn8.Location = new System.Drawing.Point(451, 288);
+            this.btn8.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn8.Location = new System.Drawing.Point(469, 297);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(134, 86);
             this.btn8.TabIndex = 1;
             this.btn8.TabStop = false;
             this.btn8.Text = "8";
-            this.btn8.UseVisualStyleBackColor = true;
+            this.btn8.UseVisualStyleBackColor = false;
             this.btn8.Click += new System.EventHandler(this.btn8_Click);
             // 
             // btn9
             // 
+            this.btn9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn9.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn9.Location = new System.Drawing.Point(586, 288);
+            this.btn9.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn9.Location = new System.Drawing.Point(604, 297);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(134, 86);
             this.btn9.TabIndex = 2;
             this.btn9.TabStop = false;
             this.btn9.Text = "9";
-            this.btn9.UseVisualStyleBackColor = true;
+            this.btn9.UseVisualStyleBackColor = false;
             this.btn9.Click += new System.EventHandler(this.btn9_Click);
             // 
             // btn6
             // 
+            this.btn6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn6.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn6.Location = new System.Drawing.Point(586, 380);
+            this.btn6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn6.Location = new System.Drawing.Point(604, 389);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(134, 86);
             this.btn6.TabIndex = 5;
             this.btn6.TabStop = false;
             this.btn6.Text = "6";
-            this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.UseVisualStyleBackColor = false;
             this.btn6.Click += new System.EventHandler(this.btn6_Click);
             // 
             // btn5
             // 
+            this.btn5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn5.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn5.Location = new System.Drawing.Point(451, 380);
+            this.btn5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn5.Location = new System.Drawing.Point(469, 389);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(134, 86);
             this.btn5.TabIndex = 4;
             this.btn5.TabStop = false;
             this.btn5.Text = "5";
-            this.btn5.UseVisualStyleBackColor = true;
+            this.btn5.UseVisualStyleBackColor = false;
             this.btn5.Click += new System.EventHandler(this.btn5_Click);
             // 
             // btn4
             // 
+            this.btn4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn4.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn4.Location = new System.Drawing.Point(316, 380);
+            this.btn4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn4.Location = new System.Drawing.Point(334, 389);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(134, 86);
             this.btn4.TabIndex = 3;
             this.btn4.TabStop = false;
             this.btn4.Text = "4";
-            this.btn4.UseVisualStyleBackColor = true;
+            this.btn4.UseVisualStyleBackColor = false;
             this.btn4.Click += new System.EventHandler(this.btn4_Click);
             // 
             // btn3
             // 
+            this.btn3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn3.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn3.Location = new System.Drawing.Point(586, 472);
+            this.btn3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn3.Location = new System.Drawing.Point(604, 481);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(134, 86);
             this.btn3.TabIndex = 8;
             this.btn3.TabStop = false;
             this.btn3.Text = "3";
-            this.btn3.UseVisualStyleBackColor = true;
+            this.btn3.UseVisualStyleBackColor = false;
             this.btn3.Click += new System.EventHandler(this.btn3_Click);
             // 
             // btn2
             // 
+            this.btn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn2.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn2.Location = new System.Drawing.Point(451, 472);
+            this.btn2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn2.Location = new System.Drawing.Point(469, 481);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(134, 86);
             this.btn2.TabIndex = 7;
             this.btn2.TabStop = false;
             this.btn2.Text = "2";
-            this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.UseVisualStyleBackColor = false;
             this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // btn1
             // 
+            this.btn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn1.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn1.Location = new System.Drawing.Point(316, 472);
+            this.btn1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn1.Location = new System.Drawing.Point(334, 481);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(134, 86);
             this.btn1.TabIndex = 6;
             this.btn1.TabStop = false;
             this.btn1.Text = "1";
-            this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.UseVisualStyleBackColor = false;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btnDot
             // 
+            this.btnDot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnDot.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDot.Location = new System.Drawing.Point(586, 564);
+            this.btnDot.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnDot.Location = new System.Drawing.Point(604, 573);
             this.btnDot.Name = "btnDot";
             this.btnDot.Size = new System.Drawing.Size(134, 86);
             this.btnDot.TabIndex = 11;
             this.btnDot.TabStop = false;
             this.btnDot.Text = ".";
-            this.btnDot.UseVisualStyleBackColor = true;
+            this.btnDot.UseVisualStyleBackColor = false;
             this.btnDot.Click += new System.EventHandler(this.btnDot_Click);
             // 
             // btn7
             // 
+            this.btn7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn7.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn7.Location = new System.Drawing.Point(316, 288);
+            this.btn7.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn7.Location = new System.Drawing.Point(334, 297);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(134, 86);
             this.btn7.TabIndex = 10;
             this.btn7.TabStop = false;
             this.btn7.Text = "7";
-            this.btn7.UseVisualStyleBackColor = true;
+            this.btn7.UseVisualStyleBackColor = false;
             this.btn7.Click += new System.EventHandler(this.btn7_Click);
             // 
             // btn0
             // 
+            this.btn0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn0.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn0.Location = new System.Drawing.Point(316, 564);
+            this.btn0.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn0.Location = new System.Drawing.Point(334, 573);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(269, 86);
             this.btn0.TabIndex = 9;
             this.btn0.TabStop = false;
             this.btn0.Text = "0";
-            this.btn0.UseVisualStyleBackColor = true;
+            this.btn0.UseVisualStyleBackColor = false;
             this.btn0.Click += new System.EventHandler(this.btn0_Click);
             // 
             // btnEqual
             // 
+            this.btnEqual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnEqual.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnEqual.Location = new System.Drawing.Point(721, 564);
+            this.btnEqual.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnEqual.Location = new System.Drawing.Point(739, 573);
             this.btnEqual.Name = "btnEqual";
             this.btnEqual.Size = new System.Drawing.Size(134, 86);
             this.btnEqual.TabIndex = 15;
             this.btnEqual.Text = "=";
-            this.btnEqual.UseVisualStyleBackColor = true;
+            this.btnEqual.UseVisualStyleBackColor = false;
             this.btnEqual.Click += new System.EventHandler(this.btnEqual_Click);
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
-            this.btnAdd.Location = new System.Drawing.Point(721, 472);
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnAdd.Location = new System.Drawing.Point(739, 481);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(134, 86);
             this.btnAdd.TabIndex = 14;
             this.btnAdd.TabStop = false;
             this.btnAdd.Text = "＋";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnMultiply
             // 
+            this.btnMultiply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnMultiply.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnMultiply.Location = new System.Drawing.Point(721, 288);
+            this.btnMultiply.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnMultiply.Location = new System.Drawing.Point(739, 297);
             this.btnMultiply.Name = "btnMultiply";
             this.btnMultiply.Size = new System.Drawing.Size(134, 86);
             this.btnMultiply.TabIndex = 13;
             this.btnMultiply.TabStop = false;
             this.btnMultiply.Text = "×";
-            this.btnMultiply.UseVisualStyleBackColor = true;
+            this.btnMultiply.UseVisualStyleBackColor = false;
             this.btnMultiply.Click += new System.EventHandler(this.btnMultiply_Click);
             // 
             // btnSubtract
             // 
+            this.btnSubtract.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSubtract.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSubtract.Location = new System.Drawing.Point(721, 380);
+            this.btnSubtract.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnSubtract.Location = new System.Drawing.Point(739, 389);
             this.btnSubtract.Name = "btnSubtract";
             this.btnSubtract.Size = new System.Drawing.Size(134, 86);
             this.btnSubtract.TabIndex = 12;
             this.btnSubtract.TabStop = false;
             this.btnSubtract.Text = "－";
-            this.btnSubtract.UseVisualStyleBackColor = true;
+            this.btnSubtract.UseVisualStyleBackColor = false;
             this.btnSubtract.Click += new System.EventHandler(this.btnSubtract_Click);
             // 
             // textBox1
@@ -245,119 +274,139 @@
             // 
             // resultBox
             // 
-            this.resultBox.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.resultBox.Location = new System.Drawing.Point(316, 33);
+            this.resultBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.resultBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.resultBox.Font = new System.Drawing.Font("굴림", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.resultBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.resultBox.Location = new System.Drawing.Point(334, 41);
             this.resultBox.Name = "resultBox";
-            this.resultBox.Size = new System.Drawing.Size(534, 53);
+            this.resultBox.Size = new System.Drawing.Size(534, 50);
             this.resultBox.TabIndex = 18;
             this.resultBox.TextChanged += new System.EventHandler(this.resultBox_TextChanged);
             // 
             // memoryBox
             // 
-            this.memoryBox.Location = new System.Drawing.Point(9, 108);
+            this.memoryBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.memoryBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.memoryBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.memoryBox.Location = new System.Drawing.Point(16, 41);
             this.memoryBox.Multiline = true;
             this.memoryBox.Name = "memoryBox";
-            this.memoryBox.Size = new System.Drawing.Size(285, 542);
+            this.memoryBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.memoryBox.Size = new System.Drawing.Size(305, 615);
             this.memoryBox.TabIndex = 19;
             // 
             // btnDivide
             // 
+            this.btnDivide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnDivide.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDivide.Location = new System.Drawing.Point(721, 196);
+            this.btnDivide.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnDivide.Location = new System.Drawing.Point(739, 205);
             this.btnDivide.Name = "btnDivide";
             this.btnDivide.Size = new System.Drawing.Size(134, 86);
             this.btnDivide.TabIndex = 23;
             this.btnDivide.TabStop = false;
             this.btnDivide.Text = "÷";
-            this.btnDivide.UseVisualStyleBackColor = true;
+            this.btnDivide.UseVisualStyleBackColor = false;
             this.btnDivide.Click += new System.EventHandler(this.btnDivide_Click);
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCancel.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCancel.ForeColor = System.Drawing.Color.Red;
-            this.btnCancel.Location = new System.Drawing.Point(316, 196);
+            this.btnCancel.Location = new System.Drawing.Point(334, 205);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(134, 86);
             this.btnCancel.TabIndex = 22;
             this.btnCancel.TabStop = false;
             this.btnCancel.Text = "C";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnPercent
             // 
+            this.btnPercent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnPercent.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnPercent.Location = new System.Drawing.Point(586, 196);
+            this.btnPercent.Location = new System.Drawing.Point(604, 205);
             this.btnPercent.Name = "btnPercent";
             this.btnPercent.Size = new System.Drawing.Size(134, 86);
             this.btnPercent.TabIndex = 21;
             this.btnPercent.TabStop = false;
             this.btnPercent.Text = "%";
-            this.btnPercent.UseVisualStyleBackColor = true;
+            this.btnPercent.UseVisualStyleBackColor = false;
             // 
             // btnSign
             // 
+            this.btnSign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSign.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSign.Location = new System.Drawing.Point(451, 196);
+            this.btnSign.Location = new System.Drawing.Point(469, 205);
             this.btnSign.Name = "btnSign";
             this.btnSign.Size = new System.Drawing.Size(134, 86);
             this.btnSign.TabIndex = 20;
             this.btnSign.TabStop = false;
             this.btnSign.Text = "＋/－";
-            this.btnSign.UseVisualStyleBackColor = true;
+            this.btnSign.UseVisualStyleBackColor = false;
             this.btnSign.Click += new System.EventHandler(this.btnSign_Click);
             // 
             // btnMsubtract
             // 
+            this.btnMsubtract.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnMsubtract.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnMsubtract.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnMsubtract.Location = new System.Drawing.Point(721, 104);
+            this.btnMsubtract.ForeColor = System.Drawing.Color.Silver;
+            this.btnMsubtract.Location = new System.Drawing.Point(739, 113);
             this.btnMsubtract.Name = "btnMsubtract";
             this.btnMsubtract.Size = new System.Drawing.Size(134, 86);
             this.btnMsubtract.TabIndex = 27;
             this.btnMsubtract.TabStop = false;
             this.btnMsubtract.Text = "M-";
-            this.btnMsubtract.UseVisualStyleBackColor = true;
+            this.btnMsubtract.UseVisualStyleBackColor = false;
             // 
             // btnMC
             // 
+            this.btnMC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnMC.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnMC.Location = new System.Drawing.Point(316, 104);
+            this.btnMC.ForeColor = System.Drawing.Color.Silver;
+            this.btnMC.Location = new System.Drawing.Point(334, 113);
             this.btnMC.Name = "btnMC";
             this.btnMC.Size = new System.Drawing.Size(134, 86);
             this.btnMC.TabIndex = 26;
             this.btnMC.TabStop = false;
             this.btnMC.Text = "MC";
-            this.btnMC.UseVisualStyleBackColor = true;
+            this.btnMC.UseVisualStyleBackColor = false;
             // 
             // btnMadd
             // 
+            this.btnMadd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnMadd.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnMadd.Location = new System.Drawing.Point(586, 104);
+            this.btnMadd.ForeColor = System.Drawing.Color.Silver;
+            this.btnMadd.Location = new System.Drawing.Point(604, 113);
             this.btnMadd.Name = "btnMadd";
             this.btnMadd.Size = new System.Drawing.Size(134, 86);
             this.btnMadd.TabIndex = 25;
             this.btnMadd.TabStop = false;
             this.btnMadd.Text = "M+";
-            this.btnMadd.UseVisualStyleBackColor = true;
+            this.btnMadd.UseVisualStyleBackColor = false;
             // 
             // btnMR
             // 
+            this.btnMR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnMR.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnMR.Location = new System.Drawing.Point(451, 104);
+            this.btnMR.ForeColor = System.Drawing.Color.Silver;
+            this.btnMR.Location = new System.Drawing.Point(469, 113);
             this.btnMR.Name = "btnMR";
             this.btnMR.Size = new System.Drawing.Size(134, 86);
             this.btnMR.TabIndex = 24;
             this.btnMR.TabStop = false;
             this.btnMR.Text = "MR";
-            this.btnMR.UseVisualStyleBackColor = true;
+            this.btnMR.UseVisualStyleBackColor = false;
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 665);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(887, 678);
             this.Controls.Add(this.btnMsubtract);
             this.Controls.Add(this.btnMC);
             this.Controls.Add(this.btnMadd);
@@ -384,6 +433,7 @@
             this.Controls.Add(this.btn4);
             this.Controls.Add(this.btn9);
             this.Controls.Add(this.btn8);
+            this.HelpButton = true;
             this.KeyPreview = true;
             this.Name = "Calculator";
             this.Text = "Calculator";
