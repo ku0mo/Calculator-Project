@@ -20,19 +20,18 @@ namespace Calculator_Project
 
             if (calHandle.Operand2 != null)
             {
-                //resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
-                resultBox.Text = calHandle.Operand2;
+                resultBox.Text = string.Format("{0} {1} {2}", calHandle.Operand1, calHandle.OperateState, calHandle.Operand2);
             }
         }
         void PrintMemoryBox() //연산 눌렀을 경우 메모리박스에 출력
         {
             if (calHandle.Operand2 != null)
             {
-                memoryBox.Text += string.Format("{0}", calHandle.Operand2) + Environment.NewLine;
+                memoryBox.Text += string.Format("{0}", calHandle.Operand2) ;
 
                 if (calHandle.OperateState != "=" && calHandle.OperateState != null)
                 { //연속 계산 시
-                    memoryBox.Text += string.Format("\t{0}", calHandle.OperateState) + Environment.NewLine;
+                    memoryBox.Text += string.Format("{0}", calHandle.OperateState);
                     resultBox.Text = calHandle.Operand1;
                 }
 
@@ -40,8 +39,7 @@ namespace Calculator_Project
             }
             else
             {
-                memoryBox.Text += calHandle.Operand1 + Environment.NewLine +
-                 string.Format("\t{0}", calHandle.OperateState) + Environment.NewLine;
+                memoryBox.Text += calHandle.Operand1 + string.Format("{0}", calHandle.OperateState);
             }
 
             if (calHandle.OperateState == "=") // = 클릭했을 때
@@ -155,7 +153,7 @@ namespace Calculator_Project
             }
             else
             {
-                //resultBox.Text = string.Format("{0} + ", calHandle.Operand1);
+                resultBox.Text = string.Format("{0} + ", calHandle.Operand1);
                 calHandle.OperateState = "＋";
                 PrintMemoryBox();
             }
@@ -184,7 +182,7 @@ namespace Calculator_Project
             }
             else
             {
-                //resultBox.Text = string.Format("{0} - ", calHandle.Operand1);
+                resultBox.Text = string.Format("{0} - ", calHandle.Operand1);
                 calHandle.OperateState = "－";
                 PrintMemoryBox();
             }
@@ -213,7 +211,7 @@ namespace Calculator_Project
             }
             else
             {
-                //resultBox.Text = string.Format("{0} × ", calHandle.Operand1);
+                resultBox.Text = string.Format("{0} × ", calHandle.Operand1);
                 calHandle.OperateState = "×";
                 PrintMemoryBox();
             }
@@ -242,7 +240,7 @@ namespace Calculator_Project
             }
             else
             {
-                //resultBox.Text = string.Format("{0} ÷ ", calHandle.Operand1);
+                resultBox.Text = string.Format("{0} ÷ ", calHandle.Operand1);
                 calHandle.OperateState = "÷";
                 PrintMemoryBox();
 
@@ -265,6 +263,7 @@ namespace Calculator_Project
             operateCount = 0;
             PrintMemoryBox();
             calHandle.OperateState = null;
+            calHandle.Cancel();
         }
 
         private void btnSign_Click(object sender, EventArgs e)
